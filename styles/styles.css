@@ -1,0 +1,103 @@
+body{
+    text-align: center;
+    background-color: skyblue
+  }
+  
+  h1{
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  #score{
+    font-size: 20px;
+  }
+  
+  #status{
+    font-size: 20px;
+  }
+  
+  #board {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  #board tr td{
+    color: black;
+    border:1px solid brown;
+    background: sandybrown;
+    width: 18px;
+    height: 18px;
+    text-align: center;
+  }
+  
+  #board tr td.clicked {
+      background-color: brown;
+      pointer-events: none;
+  }
+  
+  #board tr td.mine {
+      background-color: red;
+  }
+  
+  #board tr td.marked {
+      background-color: green;
+  }
+  
+  button{
+    text-align: center;
+    margin-top: 10px;
+    background-color: sandybrown;
+    border: 2px solid brown;
+  }
+  
+  @media only screen and (min-width: 768px) {
+  
+    h1{
+      font-size: 56px;
+    }
+  
+    #score{
+      font-size: 36px;
+    }
+  
+    #status{
+      font-size: 36px;
+    }
+  
+    #board tr td{
+      width: 36px;
+      height: 36px;
+      font-size: 18px; 
+    }
+  
+    button{
+      font-size: 18px;
+    }
+    
+  }
+  
+  @media only screen and (min-width: 1024px) {
+  
+    h1{
+      font-size: 64px;
+    }
+  
+    #score{
+      font-size: 48px;
+    }
+  
+    #status{
+      font-size: 48px;
+    }
+  
+    #board tr td{
+      width: 54px;
+      height: 54px;
+      font-size: 36px; 
+    }
+  
+    button{
+      font-size: 24px;
+    }
+    
+  }
