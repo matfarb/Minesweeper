@@ -51,7 +51,7 @@ $('#hard').on('click', function(evt) {
 function createBoard(){
   $("#board").html("");
   $("#board").css("pointer-events", "auto");
-  $("#status").html("Welcome to Minesweeper");
+  $("#status").html("");
   $("#score").html(`Score: ${score = 0}`)
   for(let x = 0; x < boardSize; x++){
     row = board.insertRow(x);
