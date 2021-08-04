@@ -22,4 +22,3 @@ Change difficulties or reset the game with the 3 difficutlty buttons.
 
 Next Steps:
 A count up timer to see how fast the player wins the game.
-Images for the mines and the marked squares.
