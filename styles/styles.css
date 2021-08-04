@@ -6,6 +6,7 @@ body{
   h1{
     text-align: center;
     font-size: 24px;
+    margin: 0;
   }
   
   #score{
@@ -37,10 +38,15 @@ body{
   
   #board tr td.mine {
       background-color: red;
+      background-image:url("/img/mine.png");
+      background-size: contain;
+
   }
   
   #board tr td.marked {
       background-color: green;
+      background-image:url("/img/flag.png");
+      background-size: contain;
   }
   
   button{
@@ -67,7 +73,7 @@ body{
     #board tr td{
       width: 36px;
       height: 36px;
-      font-size: 18px; 
+      font-size: 27px; 
     }
   
     button{
@@ -91,8 +97,8 @@ body{
     }
   
     #board tr td{
-      width: 54px;
-      height: 54px;
+      width: 48px;
+      height: 48px;
       font-size: 36px; 
     }
   
