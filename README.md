@@ -18,7 +18,7 @@ Instructions:
 Reveal all of the safe spaces without revealing a mine.  
 Left click to reveal a space.  
 Right click to mark a space that you think contains a mine.    
-Change difficulties or reset the game with the 3 difficutlty buttons.
+Change difficulties or reset the game with the 3 difficulty buttons.
 
 Next Steps:
 A count up timer to see how fast the player wins the game.
