@@ -52,6 +52,7 @@ function createBoard(){
   $("#board").html("");
   $("#board").css("pointer-events", "auto");
   $("#status").html("");
+  $("#mine-count").html(`Mines: ${mines}`)
   $("#score").html(`Score: ${score = 0}`)
   for(let x = 0; x < boardSize; x++){
     row = board.insertRow(x);
