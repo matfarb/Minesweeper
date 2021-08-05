@@ -103,6 +103,7 @@ function replaceMine(){
       for(let y = 0; y < boardSize; y++){
         if(cell.getAttribute("hidden-mine") != "true"){
           cell.setAttribute("hidden-mine", "true");
+          cell.innerHTML = "";
           idx++
         }
       }
@@ -146,7 +147,6 @@ function clickCell(cell){
       cell.setAttribute("hidden-mine", "false");
       clickCell(cell);
       replaceMine();
-      console.log("Replacing mine");  
     }else{
       $("#status").html("Game Over");
       showMines();
