@@ -85,7 +85,24 @@ function createMines(){
     for(let x = 0; x < boardSize; x++){
       for(let y = 0; y < boardSize; y++){
         if(cell.getAttribute("hidden-mine") != "true"){
-          cell.setAttribute("hidden-mine","true");
+          cell.setAttribute("hidden-mine", "true");
+          idx++
+        }
+      }
+    }
+  }
+}
+
+//used to replace a single mine, only if the first revealed cell contains a mine
+function replaceMine(){
+  for(let idx = 0; idx < 1; idx = idx){
+    let row = Math.floor(Math.random() * boardSize);
+    let column = Math.floor(Math.random() * boardSize);
+    let cell = board.rows[row].cells[column];
+    for(let x = 0; x < boardSize; x++){
+      for(let y = 0; y < boardSize; y++){
+        if(cell.getAttribute("hidden-mine") != "true"){
+          cell.setAttribute("hidden-mine", "true");
           idx++
         }
       }
@@ -124,8 +141,16 @@ function markCell(cell){
 //clickCell first checks to see if the clciked cell has the "hidden-mine" attribute.  If it does, a game over message will display, and the showMines function will run.
 function clickCell(cell){
   if(cell.getAttribute("hidden-mine") == "true"){
-    $("#status").html("Game Over");
-    showMines();
+    //if the first revealed cell would have a mine, the mine is moved to another random cell
+    if(score == 0){
+      cell.setAttribute("hidden-mine", "false");
+      clickCell(cell);
+      replaceMine();
+      console.log("Replacing mine");  
+    }else{
+      $("#status").html("Game Over");
+      showMines();
+    }
   }else{
 //if the selected cell does not have a mine, it is given the "clicked" class, the player's score is increased by 1.
     cell.classList.remove("marked");
