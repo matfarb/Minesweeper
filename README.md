@@ -14,10 +14,10 @@ HTML, CSS, Javascript, Jquery
 Getting started:
 https://matfarb.github.io/Minesweeper/
 
-Instructions:
-Reveal all of the cells without mines.  
-Left click to reveal a cell.  
-Right click to mark a cell that you think contains a mine.  
+Instructions:  
+Reveal all of the safe spaces without revealing a mine.  
+Left click to reveal a space.  
+Right click to mark a space that you think contains a mine.    
 Change difficulties or reset the game with the 3 difficutlty buttons.
 
 Next Steps:
