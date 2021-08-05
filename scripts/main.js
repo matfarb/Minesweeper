@@ -145,8 +145,8 @@ function clickCell(cell){
     //if the first revealed cell would have a mine, the mine is moved to another random cell
     if(score == 0){
       cell.setAttribute("hidden-mine", "false");
-      clickCell(cell);
       replaceMine();
+      clickCell(cell);
     }else{
       $("#status").html("Game Over");
       showMines();
@@ -174,7 +174,8 @@ function clickCell(cell){
     if(adjMines == 0){
       for(let x = Math.max((cellX - 1),0); x <= Math.min((cellX + 1),(boardSize-1)); x++){
         for(let y = Math.max((cellY - 1),0); y <= Math.min((cellY + 1),(boardSize-1)); y++){
-          if(board.rows[x].cells[y].innerHTML == ""){
+          if(board.rows[x].cells[y].innerHTML == "" && 
+          board.rows[x].cells[y].getAttribute("hidden-mine") == "false"){
             clickCell(board.rows[x].cells[y]);
           }
         }
