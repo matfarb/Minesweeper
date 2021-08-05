@@ -45,7 +45,7 @@ body{
   
   #board tr td.marked {
       background-color: green;
-      background-image:url("/assets/flag.png");
+      background-image:url("https://raw.githubusercontent.com/matfarb/Minesweeper/gh-pages/assets/flag.png");
       background-size: contain;
   }
   
