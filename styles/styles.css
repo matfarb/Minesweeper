@@ -38,14 +38,14 @@ body{
   
   #board tr td.mine {
       background-color: red;
-      background-image:url("assets/mine.png");
+      background-image:url("./assets/mine.png");
       background-size: contain;
 
   }
   
   #board tr td.marked {
       background-color: green;
-      background-image:url("assets/flag.png");
+      background-image:url("./assets/flag.png");
       background-size: contain;
   }
   
