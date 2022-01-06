@@ -21,7 +21,7 @@ const dif = {
 //default difficulty is medium on load
 let boardSize = dif.med.boardSize;
 let mines = dif.med.mines;
-let scoreNeeded = dif.med.pointsNeeded;
+let scoreNeeded = dif.med.scoreNeeded;
 
 createBoard();
 
