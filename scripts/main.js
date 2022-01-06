@@ -21,26 +21,26 @@ const dif = {
 //default difficulty is medium on load
 let boardSize = dif.med.boardSize;
 let mines = dif.med.mines;
-let scoreNeeded = dif.med.pointsNeeded;
+let scoreNeeded = dif.med.scoreNeeded;
 
 createBoard();
 
 //Changes certain values that affect the game's difficulty before running the creatBoard function, such as board size, number of mines, and the number of points needed to win
-$('#easy').on('click', function(evt) {
+$('#easy').on('click', function() {
   boardSize = dif.easy.boardSize;
   mines = dif.easy.mines;
   scoreNeeded = dif.easy.scoreNeeded;
   createBoard();
 });
 
-$('#medium').on('click', function(evt) {
+$('#medium').on('click', function() {
   boardSize = dif.med.boardSize;
   mines = dif.med.mines;
   scoreNeeded = dif.med.scoreNeeded;
   createBoard();
 });
 
-$('#hard').on('click', function(evt) {
+$('#hard').on('click', function() {
   boardSize = dif.hard.boardSize;
   mines = dif.hard.mines;
   scoreNeeded = dif.hard.scoreNeeded;
@@ -95,7 +95,7 @@ function createMines(){
 
 //used to replace a single mine, only if the first revealed cell contains a mine
 function replaceMine(){
-  for(let idx = 0; idx < 1; idx = idx){
+  //for(let idx = 0; idx < 1; idx = idx){
     let row = Math.floor(Math.random() * boardSize);
     let column = Math.floor(Math.random() * boardSize);
     let cell = board.rows[row].cells[column];
@@ -104,11 +104,11 @@ function replaceMine(){
         if(cell.getAttribute("hidden-mine") != "true"){
           cell.setAttribute("hidden-mine", "true");
           cell.innerHTML = "";
-          idx++
+          //idx++
         }
       }
     }
-  }
+  //}
 }
 
 //finds every cell with the "hidden-mine" attribute and reveals them, while disabling the ability to click cells.  Only the difficulty buttons are able to be clicked.
